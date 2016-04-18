@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "62484f7ce63690e4e920489a40ab9027",
-    "content-hash": "a3b2e8e7b4ead2dd3114a4f7f7cd4587",
+    "hash": "33be755072a34bbaf546c2ae15f09edc",
+    "content-hash": "8d76da4428ad1d70d3cadae4b4694049",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -180,27 +180,34 @@
         },
         {
             "name": "kevinrob/guzzle-cache-middleware",
-            "version": "v0.1",
+            "version": "v1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Kevinrob/guzzle-cache-middleware.git",
-                "reference": "8fe56a91942cadb206d588b28ec1b8ba9caa2de4"
+                "reference": "c54fd2dcd035f425cf00bda26233e8159659e0b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Kevinrob/guzzle-cache-middleware/zipball/8fe56a91942cadb206d588b28ec1b8ba9caa2de4",
-                "reference": "8fe56a91942cadb206d588b28ec1b8ba9caa2de4",
+                "url": "https://api.github.com/repos/Kevinrob/guzzle-cache-middleware/zipball/c54fd2dcd035f425cf00bda26233e8159659e0b9",
+                "reference": "c54fd2dcd035f425cf00bda26233e8159659e0b9",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5.0"
             },
             "require-dev": {
+                "cache/array-adapter": "^0.4",
+                "doctrine/cache": "^1.0",
                 "guzzlehttp/guzzle": "^6.0",
-                "phpunit/phpunit": "4.*"
+                "league/flysystem": "^1.0",
+                "phpunit/phpunit": "^4.0 || ^5.0",
+                "psr/cache": "^1.0"
             },
             "suggest": {
-                "guzzlehttp/guzzle": "For using this library. It was created for Guzzle6."
+                "doctrine/cache": "This library have a lot of ready-to-use cache storage (to be use with Kevinrob\\GuzzleCache\\Storage\\DoctrineCacheStorage)",
+                "guzzlehttp/guzzle": "For using this library. It was created for Guzzle6. (but you can use it with any PSR-7 HTTP Client)",
+                "league/flysystem": "To be use with Kevinrob\\GuzzleCache\\Storage\\FlysystemStorage",
+                "psr/cache": "To be use with Kevinrob\\GuzzleCache\\Storage\\Psr6CacheStorage"
             },
             "type": "library",
             "autoload": {
@@ -222,15 +229,30 @@
                     "homepage": "https://github.com/Kevinrob"
                 }
             ],
-            "description": "A HTTP Cache for Guzzle 6. It's a simple Middleware to be added in the HandlerStack.",
+            "description": "A HTTP/1.1 Cache for Guzzle 6. It's a simple Middleware to be added in the HandlerStack. (RFC 7234)",
             "homepage": "https://github.com/Kevinrob/guzzle-cache-middleware",
             "keywords": [
+                "Etag",
+                "Flysystem",
                 "Guzzle",
                 "cache",
+                "cache-control",
+                "doctrine",
+                "expiration",
+                "guzzle6",
+                "handler",
                 "http",
-                "psr7"
+                "http 1.1",
+                "middleware",
+                "performance",
+                "php",
+                "promise",
+                "psr6",
+                "psr7",
+                "rfc7234",
+                "validation"
             ],
-            "time": "2015-06-30 11:16:34"
+            "time": "2016-04-07 06:44:18"
         },
         {
             "name": "psr/http-message",
